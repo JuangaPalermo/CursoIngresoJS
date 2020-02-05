@@ -13,7 +13,7 @@ function sumar()
 
     suma = num1 + num2
 
-    alert(suma)
+    alert("La suma es " + suma)
 	
 }
 
@@ -28,7 +28,7 @@ function restar()
 
     resta = num1 - num2
 
-    alert(resta)
+    alert("La resta es " + resta)
 	
 }
 
@@ -43,7 +43,7 @@ function multiplicar()
 
     mult = num1 * num2
 
-    alert(mult)
+    alert("La multiplicacion es " + mult)
 	
 }
 
@@ -58,7 +58,7 @@ function dividir()
 
     div = num1 / num2
 
-    alert(div)
+    alert("La division es " + div)
 	
 }
 
