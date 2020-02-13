@@ -2,7 +2,7 @@ function mostrar()
 {
 	var aleatorio
 	
-	aleatorio = Math.round(Math.random()*10);
+	aleatorio = Math.floor(Math.random()*((10+1)-1)+1);
 
 	
 	if (aleatorio >= 9)	{
