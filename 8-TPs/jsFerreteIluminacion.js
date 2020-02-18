@@ -10,5 +10,77 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    var lamparas;
+    var gastobruto;
+    var descuento;
+    var empresa;
+
+    empresa = document.getElementById("Marca").value;
+    lamparas = parseInt(document.getElementById("Cantidad").value);
+    gastobruto = lamparas * 35;
+
+    if (lamparas >= 6){
+
+        descuento = (gastobruto*50/100);
+ 
+        document.getElementById("precioDescuento").value = gastobruto - descuento;
+
+    } else if (lamparas == 5){
+
+        switch (empresa){
+            
+            case "ArgentinaLuz":
+                gastobruto = (lamparas * 35);
+                descuento = (gastobruto*40/100);
+                document.getElementById("precioDescuento").value = gastobruto - descuento;
+                break;
+            
+            default:
+                gastobruto = (lamparas * 35);
+                descuento = (gastobruto*30/100);
+                document.getElementById("precioDescuento").value = gastobruto - descuento;
+        }
+
+    } else if (lamparas == 4){
+
+        switch (empresa){
+
+            case "ArgentinaLuz":
+            case "FelipeLamparas":
+                gastobruto = (lamparas * 35);
+                descuento = (gastobruto*25/100);
+                document.getElementById("precioDescuento").value = gastobruto - descuento;
+                break;
+            
+            default:
+                gastobruto = (lamparas * 35);
+                descuento = (gastobruto*20/100);
+                document.getElementById("precioDescuento").value = gastobruto - descuento;
+        }
+
+    } else if (lamparas == 3){
+
+        switch (empresa){
+
+            case "ArgentinaLuz":
+                gastobruto = (lamparas * 35);
+                descuento = (gastobruto*15/100);
+                document.getElementById("precioDescuento").value = gastobruto - descuento;
+                break;
+
+            case "FelipeLamparas":
+                gastobruto = (lamparas * 35);
+                descuento = (gastobruto*10/100);
+                document.getElementById("precioDescuento").value = gastobruto - descuento;
+                break;
+
+            default:
+                gastobruto = (lamparas * 35);
+                descuento = (gastobruto*5/100);
+                document.getElementById("precioDescuento").value = gastobruto - descuento;
+                break;
+        }
+
+    }
+    
 }

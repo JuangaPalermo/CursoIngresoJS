@@ -10,7 +10,7 @@ function mostrar()
     }
     else
     {
-        alert("Utsed es mayor de edad")
+        alert("Usted es mayor de edad")
     }
     
 }//FIN DE LA FUNCIÓN
