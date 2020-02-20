@@ -1,31 +1,43 @@
 function mostrar()
 {
 
-	var contador=0;
-	var maximo;
+	var flag = 0;
 	var minimo;
-	// declarar variables
-	
+	var maximo;
 	var respuesta;
+	var numero;
 
-	do
-	{
-		numero = parseFloat(prompt("Ingrese el numero que desee: "));
-		contador++
-
-		if (numero < minimo){
-
-			minimo = numero;
-		}
-
-		if (numero > maximo){
-
-			maximo = maximo;
-		}
+	do {
 		
-		respuesta = prompt("Desea seguir agregando numeros? Ingrese \"si\" o \"no\"");
+		numero = parseInt(prompt("Ingrese el numero que desee: "))
 
-	}while(respuesta!='no');
+		while (isNaN(numero)){
+
+			numero = parseInt(prompt("Lo que ingreso no es un numero, ingrese nuevamente: "))
+
+		}
+
+		if (flag == 0 || numero > maximo){
+
+			maximo = numero
+
+		}
+
+		if (flag == 0 || numero < minimo){
+
+			minimo = numero
+			flag = 1
+
+		}
+
+		
+		respuesta = prompt("Desea ingresar otro numero? Ingrese \"si\" o \"no\".");
+
+	} while (respuesta == "si");
+	
+
+	
+
 
 	document.getElementById("maximo").value = maximo;
 	document.getElementById("minimo").value = minimo;
